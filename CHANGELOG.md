@@ -1,3 +1,7 @@
+# 0.6.0 (Custom)
+
+* change hugo version (0.30.2 -> 0.37.1)
+
 # 0.5.4
 
 * fix download of hugo releases on Mac OS
