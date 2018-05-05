@@ -129,6 +129,8 @@ function withHugo(options, callback) {
 
   var version;
 
+  console.log(process.cwd());
+
   var fs = require('fs');
   if (fs.existsSync(CONFIG_FILE)) {
       version = fs.readFileSync(CONFIG_FILE);
