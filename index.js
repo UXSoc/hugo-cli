@@ -17,6 +17,8 @@ var TARGET = {
   arch: process.arch
 };
 
+var CONFIG_FILE = 'hugo-version.json';
+
 var PLATFORM_LOOKUP = {
     'darwin': 'macOS',
     'freebsd': 'FreeBSD',
@@ -125,7 +127,30 @@ function withHugo(options, callback) {
     options = '';
   }
 
-  var version = options.version || HUGO_DEFAULT_VERSION;
+  var version;
+
+  var fs = require('fs');
+  if (fs.existsSync(CONFIG_FILE)) {
+      version = fs.readFileSync(CONFIG_FILE);
+      version = JSON.parse(version);
+      if (version.hasOwnProperty('hugo')) {
+        version = version.hugo;
+      } else {
+        console.log("Property 'hugo' not found: check hugo-version.json");
+        console.log("Make sure file follows pattern: { \"hugo\":\"0.40.1\" }");
+        console.log("Setting defualt: 0.37.1");
+
+        console.log();
+        version = HUGO_DEFAULT_VERSION;
+      }
+  } else {
+      console.log("File not found: check that hugo-version.json exists in root directory");
+      console.log("Setting defualt: 0.37.1");
+      console.log();
+
+      version = HUGO_DEFAULT_VERSION;
+  }
+
   var verbose = options.verbose;
 
   verbose && debug('target=' + util.inspect(TARGET));
