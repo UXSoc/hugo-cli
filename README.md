@@ -8,7 +8,8 @@ A simple Node wrapper around [hugo, the static site generator](http://gohugo.io)
 ## Installing
 
 The first time this is run, it installs hugo into */node_modules/.bin* (It continues to run hugo after installing)
-The default version is 0.37.1, but it will install the version defined in *hugo-version.json*
+
+The default version is 0.37.1, but it will install the version defined in *hugo-version.json*.
 Use the following inside *hugo-version.json*:
 
 format: `{ "hugo":"version number" }`
@@ -44,4 +45,5 @@ Usage:
 MIT
 
 ## About
-Modified by Jonathan Burns
+Modified by Jonathan Burns: https://github.com/jhburns.
+For UX Society and general use.
