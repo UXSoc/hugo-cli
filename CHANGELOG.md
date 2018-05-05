@@ -1,3 +1,7 @@
+# 0.6.1 (Custom)
+
+* down checks for config file first, added more info to README
+
 # 0.6.0 (Custom)
 
 * change hugo version (0.30.2 -> 0.37.1)
