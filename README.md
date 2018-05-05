@@ -9,7 +9,7 @@ A simple Node wrapper around [hugo, the static site generator](http://gohugo.io)
 
 The first time this is run, it installs hugo into */node_modules/.bin* (It continues to run hugo after installing)
 
-The default version is 0.37.1, but it will install the version defined in *hugo-version.json*.
+The default version is 0.37.1, but it will install the version defined in *hugo-version.json* which should be placed in the same directory as *package.lock*.
 Use the following inside *hugo-version.json*:
 
 format: `{ "hugo":"version number" }`
