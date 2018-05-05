@@ -1,11 +1,15 @@
-# hugo-cli
+# hugo-cli (Custom branch)
 
 [![Build Status](https://travis-ci.org/nikku/hugo-cli.svg?branch=master)](https://travis-ci.org/nikku/hugo-cli)
 
 A simple Node wrapper around [hugo, the static site generator](http://gohugo.io). It fetches the right hugo executable before piping all provided command line arguments to it.
 
+### Add to a project
+Add     `"hugo-cli": "git+ssh://git@github.com/UXSoc/hugo-cli.git"` in packages.json under "devDependencies"
 
-## Installing
+Or `npm add --save-dev git+ssh://git@github.com/UXSoc/hugo-cli.git` in terminal
+
+## Installing Hugo
 
 The first time this is run, it installs hugo into */node_modules/.bin* (It continues to run hugo after installing)
 
