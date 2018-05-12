@@ -9,15 +9,12 @@ var path = require('path'),
 var util = require('util');
 
 var HUGO_BASE_URL = 'https://github.com/gohugoio/hugo/releases/download',
-    HUGO_MIN_VERSION = '0.20.0',
-    HUGO_DEFAULT_VERSION = process.env.HUGO_VERSION || '0.37.1';
+    HUGO_MIN_VERSION = '0.20.0';
 
 var TARGET = {
   platform: process.platform,
   arch: process.arch
 };
-
-var CONFIG_FILE = 'hugo-version.json';
 
 var PLATFORM_LOOKUP = {
     'darwin': 'macOS',
@@ -120,35 +117,11 @@ function getDetails(version, target) {
  * @param  {Object} options
  * @param  {Function} callback
  */
-function withHugo(options, callback) {
+function withHugo(options, version, callback) {
 
-  if (typeof options === 'function') {
+    if (typeof options === 'function') {
     callback = options;
     options = '';
-  }
-
-  var version;
-
-  var fs = require('fs');
-  if (fs.existsSync(CONFIG_FILE)) {
-      version = fs.readFileSync(CONFIG_FILE);
-      version = JSON.parse(version);
-      if (version.hasOwnProperty('hugo')) {
-        version = version.hugo;
-      } else {
-        console.log("Property 'hugo' not found: check hugo-version.json");
-        console.log("Make sure file follows pattern: { \"hugo\":\"0.40.1\" }");
-        console.log("Setting defualt: 0.37.1");
-
-        console.log();
-        version = HUGO_DEFAULT_VERSION;
-      }
-  } else {
-      console.log("File not found: check that hugo-version.json exists in root directory");
-      console.log("Setting defualt: 0.37.1");
-      console.log();
-
-      version = HUGO_DEFAULT_VERSION;
   }
 
   var verbose = options.verbose;

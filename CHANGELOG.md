@@ -1,3 +1,7 @@
+# 0.6.2 (Custom)
+
+* down reads in source_location from config file to set the location of hugo's real config file
+
 # 0.6.1 (Custom)
 
 * down checks for config file first, added more info to README
