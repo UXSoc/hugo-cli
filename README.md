@@ -13,11 +13,11 @@ Or `npm add --save-dev git+ssh://git@github.com/UXSoc/hugo-cli.git` in terminal
 
 The first time this is run, it installs hugo into */node_modules/.bin* (It continues to run hugo after installing)
 
-The default version is 0.37.1, but it will install the version defined in *hugo-version.json* which should be placed in the same directory as *package.lock*.
+The default version is 0.37.1, but it will install the version defined in *hugo-version.json* which should be placed in the same directory as *package.lock*. The hugo config file is from source_location, the default is the same location as yarn.
 Use the following inside *hugo-version.json*:
 
-format: `{ "hugo":"version number" }`
-example: `{ "hugo":"0.40.1" }`
+format: `{ "hugo":"version number", "source_location": "path" }`
+example: `{ "hugo":"0.40.1", "source_location": "../../" }`
 
 
 ## Usage
