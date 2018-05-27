@@ -1,7 +1,5 @@
 # hugo-cli (Custom branch)
 
-[![Build Status](https://travis-ci.org/nikku/hugo-cli.svg?branch=master)](https://travis-ci.org/nikku/hugo-cli)
-
 A simple Node wrapper around [hugo, the static site generator](http://gohugo.io). It fetches the right hugo executable before piping all provided command line arguments to it.
 
 ### Add to a project
