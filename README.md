@@ -5,7 +5,7 @@ A simple Node wrapper around [hugo, the static site generator](http://gohugo.io)
 ### Add to a project
 Add     `"hugo-cli": "git+ssh://git@github.com/UXSoc/hugo-cli.git"` in packages.json under "devDependencies"
 
-Or `npm add --save-dev git+ssh://git@github.com/UXSoc/hugo-cli.git` in terminal
+Or `npm install --save-dev git+ssh://git@github.com/UXSoc/hugo-cli.git` in terminal
 
 ## Installing Hugo
 
