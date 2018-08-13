@@ -3,9 +3,9 @@
 A simple Node wrapper around [hugo, the static site generator](http://gohugo.io). It fetches the right hugo executable before piping all provided command line arguments to it.
 
 ### Add to a project
-Add     `"hugo-cli": "git+ssh://git@github.com/UXSoc/hugo-cli.git"` in packages.json under "devDependencies"
+With `yarn add https://github.com/UXSoc/hugo-cli/archive/0.6.2.tar.gz` in terminal
 
-Or `npm install --save-dev git+ssh://git@github.com/UXSoc/hugo-cli.git` in terminal
+or `npm install --save-dev https://github.com/UXSoc/hugo-cli/archive/0.6.2.tar.gz`
 
 ## Installing Hugo
 
@@ -20,7 +20,7 @@ example: `{ "hugo":"0.40.1", "source_location": "../../" }`
 
 ## Usage
 
-With yarn: `yarn run hugo`
+With yarn: `yarn hugo`
 
 ```bash
 > hugo -h
